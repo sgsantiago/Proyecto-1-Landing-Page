@@ -1,0 +1,1042 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', system-ui;
+  font-weight: 400;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+:root {
+  /* COLORS */
+  --mercedes-color-01: #ffffff;
+  --mercedes-color-02: #f5f5f5;
+  --mercedes-color-03: #eeeeee;
+  --mercedes-color-04: #d9d9d9;
+  --mercedes-color-05: #c5c5c5;
+  --mercedes-color-06: #a2a2a2;
+  --mercedes-color-07: #404243;
+  --mercedes-color-08: #000000;
+  --mercedes-color-09: #b20000;
+  --mercedes-color-10: #515f91;
+  --mercedes-color-11: #0010a1;
+  --mercedes-color-12: #e2c324;
+
+  /* BACKGROUND */
+  --mercedes-header-background: var(--mercedes-color-03);
+  --mercedes-section-background: var(--mercedes-color-02);
+  --mercedes-card-background: var(--mercedes-color-04);
+  --mercedes-button-background: var(--mercedes-color-01);
+  --mercedes-contact-now-background: var(--mercedes-color-07);
+  --mercedes-footer-background: var(--mercedes-color-08);
+
+  /* CAR COLOR PICKERS */
+  --mercedes-color-selector-01: var(--mercedes-color-05);
+  --mercedes-color-selector-02: var(--mercedes-color-09);
+  --mercedes-color-selector-03: var(--mercedes-color-11);
+  --mercedes-color-selector-04: var(--mercedes-color-08);
+  --mercedes-color-selector-05: var(--mercedes-color-12);
+  --mercedes-color-selector-06: var(--mercedes-color-10);
+
+  /* TEXT COLORS */
+  --mercedes-text-color-000: var(--mercedes-color-01);
+  --mercedes-text-color-050: var(--mercedes-color-07);
+  --mercedes-text-color-100: var(--mercedes-color-08);
+
+  /* SPACINGS */
+  --mercedes-margin-xs: 10px;
+  --mercedes-margin-s: 20px;
+  --mercedes-margin-m: 30px;
+  --mercedes-margin-l: 40px;
+  --mercedes-margin-xl: 50px;
+  --mercedes-margin-xxl: 60px;
+
+  --mercedes-padding-xs: 10px;
+  --mercedes-padding-s: 20px;
+  --mercedes-padding-m: 30px;
+  --mercedes-padding-l: 40px;
+  --mercedes-padding-xl: 50px;
+  --mercedes-padding-xxl: 60px;
+
+  --mercedes-gap-xs: 10px;
+  --mercedes-gap-s: 20px;
+  --mercedes-gap-m: 30px;
+  --mercedes-gap-l: 40px;
+  --mercedes-gap-xl: 50px;
+  --mercedes-gap-xxl: 60px;
+
+  /* BORDER RADIUS */
+  --mercedes-border-radius: 20px;
+  --mercedes-border-radius-m: 40px;
+}
+
+body {
+  font-size: 16px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --------------------HEADER-------------------- */
+header.flex-container {
+  width: 100%;
+  height: 5em;
+  justify-content: space-between;
+  background-color: var(--mercedes-header-background);
+}
+
+#logo {
+  width: 6.25rem;
+}
+
+nav.flex-container {
+  width: 100%;
+  justify-content: left;
+}
+
+#ul-header.flex-container {
+  font-size: 1.0625em;
+  width: 40%;
+  justify-content: space-around;
+  align-items: start;
+  gap: var(--mercedes-gap-m);
+}
+#ul-header > li:hover {
+  text-decoration: underline;
+}
+
+#ul-header > li > a:active {
+  color: red;
+}
+
+.burger-menu {
+  display: none;
+}
+
+/* --------------------HERO-------------------- */
+.flex-container.hero {
+  width: 100%;
+  background-image: url(./assets/mercedes_hero.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 30.375em;
+  color: var(--mercedes-text-color-000);
+  justify-content: start;
+  align-items: start;
+  padding-top: var(--mercedes-padding-l);
+  padding-left: var(--mercedes-padding-xl);
+}
+.hero > div {
+  width: 34.375em;
+  height: 12.5em;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4.0625em;
+  font-weight: 400;
+}
+.hero > div > h3 {
+  font-size: 1.0625em;
+  font-weight: 300;
+}
+
+/* --------------------MODELS-------------------- */
+.models {
+  width: 100%;
+  padding: var(--mercedes-padding-l);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap: var(--mercedes-gap-l);
+}
+.card.flex-container {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  width: 98%;
+  background-color: var(--mercedes-card-background);
+  border-radius: var(--mercedes-border-radius);
+  padding: var(--mercedes-padding-m);
+  gap: var(--mercedes-gap-s);
+}
+
+.card-heading > h3 {
+  font-size: 1.875em;
+}
+
+.card-heading > p {
+  font-size: 1.125em;
+  font-weight: 300;
+}
+
+.card-picture.flex-container {
+  width: 100%;
+  justify-content: center;
+}
+
+.card-picture > img {
+  width: 100%;
+}
+
+.info-colors {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.info-colors > a > button {
+  font-size: 1em;
+  font-weight: 300;
+  border: none;
+  width: 7.1875em;
+  background-color: var(--mercedes-button-background);
+  color: var(--mercedes-text-color-100);
+  border-radius: var(--mercedes-border-radius);
+  padding: var(--mercedes-padding-xs);
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+}
+.info-colors > button:active {
+  filter: brightness(90%);
+}
+
+.color-options {
+  width: 12.5em;
+  justify-content: end;
+  gap: 0.9375em;
+}
+
+.color {
+  width: 1.875em;
+  height: 1.875em;
+  border-radius: 100%;
+  border: 1px solid white;
+}
+
+.color-1 {
+  background-color: var(--mercedes-color-selector-01);
+}
+
+.color-2 {
+  background-color: var(--mercedes-color-selector-02);
+}
+
+.color-3 {
+  background-color: var(--mercedes-color-selector-03);
+}
+
+.color-4 {
+  background-color: var(--mercedes-color-selector-04);
+}
+
+.color-5 {
+  background-color: var(--mercedes-color-selector-05);
+}
+
+.color-6 {
+  background-color: var(--mercedes-color-selector-06);
+}
+
+label > div {
+  cursor: pointer;
+}
+
+label > div:active {
+  border: 2px solid black;
+}
+
+label ~ input {
+  display: none;
+}
+
+/* --------------------STORES-------------------- */
+.stores {
+  width: 100%;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.stores-head {
+  flex-direction: column;
+  align-items: start;
+  width: 70%;
+  padding-left: var(--mercedes-padding-l);
+  padding-bottom: var(--mercedes-padding-m);
+}
+
+.stores-head > h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5em;
+  font-weight: 400;
+}
+
+.stores-head > p {
+  width: 31.25em;
+  font-size: 1.5em;
+}
+
+.stores-picture {
+  width: 100%;
+  height: 43.75em;
+  justify-content: start;
+  padding: var(--mercedes-padding-xl);
+  background-image: url(./assets/mercedes_City_Lights_of_the_United_States_2012.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.partner {
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: var(--mercedes-gap-s);
+  padding: var(--mercedes-padding-m);
+  color: var(--mercedes-text-color-000);
+  background-color: #6969697c;
+  border-radius: var(--mercedes-border-radius);
+  width: 21.875em;
+}
+
+.partner > h4 {
+  font-size: 2.1875em;
+  font-weight: 300;
+}
+
+.partner > a > button {
+  width: 18em;
+  padding: var(--mercedes-padding-xs);
+  cursor: pointer;
+  border: none;
+  border-radius: var(--mercedes-border-radius);
+  font-size: 0.75em;
+  font-weight: 300;
+  text-align: center;
+}
+
+.partner > button:active {
+  filter: brightness(90%);
+}
+
+/* --------------------FEATURES-------------------- */
+
+.features {
+  padding: var(--mercedes-padding-m);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--mercedes-gap-m);
+  overflow: scroll;
+}
+
+.feature-card {
+  width: 31.25em;
+  height: 31.25em;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: var(--mercedes-padding-l);
+  background-color: var(--mercedes-card-background);
+  border-radius: var(--mercedes-border-radius);
+  gap: var(--mercedes-gap-m);
+}
+
+.feature-card > h4 {
+  font-size: 1.5625em;
+}
+
+.feature-card > div {
+  width: 100%;
+  height: 18.75em;
+}
+
+.feature-card > button {
+  font-size: 0.875em;
+  border: none;
+  width: 7.1875em;
+  background-color: var(--mercedes-button-background);
+  color: var(--mercedes-text-color-100);
+  border-radius: var(--mercedes-border-radius);
+  padding: var(--mercedes-padding-xs);
+  cursor: pointer;
+}
+.feature-card > button:active {
+  filter: brightness(90%);
+}
+
+.card-confort {
+  background-image: url(./assets/mercedes-confort.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.card-tech {
+  background-image: url(./assets/mercedes_technology.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.card-accesories {
+  background-image: url(./assets/mercedes_accesories.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* --------------------TEMPTATION-------------------- */
+.temptation {
+  width: 100%;
+  height: 48.875em;
+  background-image: url(./assets/mercedes_maybach-clase-s-3267077.png);
+  background-size: cover;
+  background-position: center;
+  justify-content: start;
+  align-items: end;
+  padding-bottom: var(--mercedes-padding-l);
+  padding-left: 6.25em;
+}
+
+.temptation-info {
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 39.25em;
+  height: 13.625em;
+  color: var(--mercedes-text-color-000);
+}
+
+.temptation-info > h4 {
+  font-size: 3.125em;
+}
+
+.temptation-info > p {
+  font-size: 1.0625em;
+  width: 68%;
+  font-weight: 300;
+}
+
+/* --------------------WHEEL-------------------- */
+.wheel {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: var(--mercedes-gap-xs);
+  width: 100%;
+  height: 43.75em;
+  padding: 0 6.25em;
+}
+
+.wheel-head {
+  width: 100%;
+  justify-content: start;
+  gap: var(--mercedes-gap-xs);
+  grid-column: 1/6;
+  grid-row: 3/6;
+}
+
+.wheel-head > h4 {
+  font-size: 2.5em;
+}
+
+.wheel-info {
+  width: 100%;
+  justify-content: start;
+  gap: var(--mercedes-gap-xs);
+  grid-column: 1/5;
+  grid-row: 6/8;
+}
+
+.wheel-info > p {
+  font-size: 1.03em;
+  font-weight: 300;
+}
+
+.wheel-learn {
+  justify-content: start;
+  font-size: 1em;
+  grid-column: 1/6;
+  grid-row: 8/9;
+}
+
+.wheel-learn > a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.wheel-learn > a:active {
+  color: red;
+}
+
+.wheel-img {
+  grid-column: 6/11;
+  grid-row: 2/10;
+  background-image: url(./assets/mercedes_maybach_wheel.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* --------------------FOOTER-------------------- */
+footer {
+  color: var(--mercedes-text-color-000);
+}
+
+.contact {
+  width: 100%;
+  height: 9.375em;
+  background-color: var(--mercedes-contact-now-background);
+  padding: 0 var(--mercedes-padding-l);
+  justify-content: space-around;
+  gap: var(--mercedes-gap-s);
+}
+
+.contact > p {
+  font-size: 1.125em;
+  max-width: 50em;
+  font-weight: 200;
+}
+
+.contact > button {
+  font-size: 0.875em;
+  font-weight: 500;
+  border: none;
+  width: 12.5em;
+  background-color: var(--mercedes-button-background);
+  color: var(--mercedes-text-color-100);
+  border-radius: var(--mercedes-border-radius);
+  padding: var(--mercedes-padding-xs);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.contact > button:active {
+  filter: brightness(90%);
+}
+
+.newsletter {
+  width: 100%;
+  height: 43.75em;
+  background-color: var(--mercedes-footer-background);
+  flex-direction: column;
+  gap: 1.25em;
+  padding: var(--mercedes-padding-xxl) 0;
+}
+
+.subscription {
+  flex-direction: column;
+  justify-content: space-around;
+  height: 18.75em;
+}
+.subscription > h4 {
+  font-size: 1.4375em;
+  font-weight: 300;
+}
+.subscription > p {
+  font-size: 1.125em;
+  font-weight: 100;
+}
+
+.newsletter-form {
+  flex-direction: column;
+  justify-content: space-around;
+  height: 9.375em;
+}
+
+form {
+  flex-direction: column;
+}
+
+.input-group {
+  width: 31.25em;
+  border: 2px solid var(--mercedes-text-color-000);
+  border-radius: var(--mercedes-border-radius-m);
+  justify-content: space-between;
+  padding-left: var(--mercedes-padding-s);
+}
+
+.input-group > input {
+  background-color: #000000;
+  width: 18.75em;
+  border: none;
+  outline: none;
+  color: var(--mercedes-text-color-000);
+  font-size: 1em;
+  font-weight: 300;
+}
+.input-group > input::placeholder {
+  color: var(--mercedes-text-color-050);
+  font-weight: 300;
+}
+
+#subscribe {
+  font-size: 0.875em;
+  border: none;
+  width: 9.375em;
+  background-color: var(--mercedes-button-background);
+  color: var(--mercedes-text-color-100);
+  border-radius: var(--mercedes-border-radius-m);
+  padding: var(--mercedes-padding-xs);
+  cursor: pointer;
+}
+
+.input-group > button:active {
+  filter: brightness(90%);
+}
+
+.checkbox-container {
+  width: 31.25em;
+  gap: 0.9375em;
+}
+
+.checkbox-container > input {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.checkbox-container > span {
+  font-size: 0.8125em;
+  font-weight: 200;
+}
+
+.checkbox-container > span > a {
+  color: var(--mercedes-text-color-000);
+  text-decoration: underline;
+}
+
+.social-media {
+  width: 12.5em;
+  justify-content: space-around;
+}
+
+/* --------------------FOOTER MENUS-------------------- */
+.footer-menus {
+  justify-content: space-around;
+  align-items: start;
+  width: 100%;
+  height: 25em;
+  background-color: var(--mercedes-footer-background);
+  padding: var(--mercedes-padding-s);
+}
+
+.footer-menu.flex-container {
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 0.9375em;
+  width: 12.5em;
+}
+
+.footer-menu > h4 {
+  font-size: 1.4375em;
+  font-weight: 200;
+}
+
+.footer-menu > ul {
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.footer-menu > ul > li {
+  font-size: 1.125em;
+  font-weight: 100;
+}
+
+.footer-menu > ul > li > a {
+  cursor: pointer;
+  color: var(--mercedes-text-color-050);
+}
+
+.footer-menu > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+.top-button {
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  border-radius: 100%;
+  bottom: 0;
+  right: 0;
+  margin: var(--mercedes-margin-m);
+}
+
+.top-button > a > img {
+  cursor: pointer;
+}
+
+@media (min-width: 1800px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1440px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+
+  nav.flex-container {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+
+  .hero {
+    padding-top: var(--mercedes-padding-m);
+  }
+
+  .models {
+    grid-template-columns: auto;
+  }
+}
+
+@media (max-width: 630px) {
+  body {
+    font-size: 8px;
+  }
+
+  #logo {
+    width: 4.25rem;
+  }
+
+  .flex-container.hero {
+    padding: var(--mercedes-padding-s);
+    align-items: end;
+  }
+
+  .hero > div {
+    align-items: start;
+    justify-content: end;
+  }
+
+  h1 {
+    font-size: 3.7em;
+  }
+
+  .hero > div > h3 {
+    font-size: 2.0625em;
+  }
+
+  .models {
+    padding: var(--mercedes-padding-m);
+    gap: var(--mercedes-gap-m);
+  }
+
+  .card.flex-container {
+    align-items: center;
+  }
+  .card-picture > img {
+    width: 80%;
+  }
+
+  .card-heading > h3 {
+    text-align: center;
+    font-size: 3.5em;
+  }
+
+  .card-heading > p {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .info-colors {
+    justify-content: center;
+  }
+
+  .info-colors > a > button {
+    font-size: 1.6em;
+    font-weight: 400;
+  }
+
+  .color-options {
+    display: none;
+  }
+
+  .stores {
+    align-items: center;
+    text-align: center;
+  }
+
+  .stores-head {
+    align-items: center;
+    width: 100%;
+    padding: var(--mercedes-padding-xs);
+  }
+
+  .stores-head > p {
+    width: 80%;
+    font-size: 2em;
+  }
+
+  .stores-picture {
+    height: 43.75em;
+    justify-content: center;
+    padding: var(--mercedes-padding-m) var(--mercedes-padding-s);
+  }
+
+  .partner {
+    align-items: center;
+    justify-content: space-around;
+    padding: var(--mercedes-padding-xs);
+    gap: var(--mercedes-gap-s);
+    width: 90%;
+    height: 100%;
+  }
+
+  .partner > h4 {
+    font-size: 4em;
+  }
+
+  .partner > a > button {
+    font-size: 1.5em;
+  }
+
+  .features {
+    padding: var(--mercedes-padding-xs) var(--mercedes-padding-m);
+  }
+
+  .feature-card {
+    width: 35.25em;
+    height: 35.25em;
+    align-items: center;
+    padding: var(--mercedes-padding-xs);
+  }
+
+  .feature-card > h4 {
+    font-size: 3em;
+  }
+
+  .feature-card > div {
+    width: 100%;
+  }
+
+  .feature-card > button {
+    font-size: 1.9em;
+    font-weight: 300;
+  }
+
+  .temptation {
+    width: 100%;
+    height: 48.875em;
+    background-image: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .temptation-info {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--mercedes-text-color-100);
+    gap: var(--mercedes-gap-xs);
+    background-color: var(--mercedes-card-background);
+  }
+
+  .temptation-info > div {
+    background-image: url(./assets/mercedes_maybach-clase-s-3267077.png);
+    background-size: cover;
+    background-position: center;
+    height: 28.375em;
+    width: 100%;
+  }
+
+  .temptation-info > h4 {
+    font-size: 2.5em;
+  }
+
+  .temptation-info > p {
+    font-size: 1.6em;
+    width: 80%;
+    font-weight: 400;
+    text-align: justify;
+  }
+
+  .wheel {
+    height: 83.75em;
+    padding: var(--mercedes-padding-xs);
+  }
+
+  .wheel-head.flex-container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: var(--mercedes-gap-xs);
+    grid-column: 1/11;
+    grid-row: 1/3;
+  }
+
+  .wheel-head > h4 {
+    font-size: 4.4em;
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+  }
+
+  .wheel-info {
+    justify-content: center;
+    grid-column: 2/10;
+    grid-row: 8/10;
+  }
+
+  .wheel-info > p {
+    font-size: 2em;
+    font-weight: 300;
+  }
+
+  .wheel-learn {
+    justify-content: center;
+    font-size: 1.7em;
+    grid-column: 1/11;
+    grid-row: 10/11;
+  }
+
+  .wheel-img {
+    grid-column: 1/11;
+    grid-row: 3/8;
+  }
+
+  .contact {
+    height: 19.375em;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact > p {
+    font-size: 1.7em;
+    text-align: center;
+  }
+
+  .contact > button {
+    font-size: 1.5em;
+  }
+
+  .newsletter {
+    width: 100%;
+    height: 30.75em;
+    padding: var(--mercedes-padding-xs);
+  }
+
+  .subscription {
+    justify-content: space-around;
+    width: 100%;
+  }
+  .subscription > h4 {
+    font-size: 2.3em;
+  }
+  .subscription > p {
+    font-size: 1.5em;
+    font-weight: 200;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    justify-content: space-around;
+    width: 95%;
+  }
+
+  .input-group {
+    width: 100%;
+    border: 1px solid var(--mercedes-text-color-000);
+  }
+
+  .input-group > input {
+    font-size: 1.4em;
+    font-weight: 300;
+  }
+
+  #subscribe {
+    font-size: 1.5em;
+    width: 10.375em;
+  }
+
+  .checkbox-container {
+    width: 31.25em;
+    gap: 0.9375em;
+  }
+
+  .checkbox-container > input {
+    transform: scale(1.1);
+  }
+
+  .social-media {
+    width: 20.5em;
+    justify-content: space-around;
+  }
+
+  .footer-menus {
+    height: auto;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: var(--mercedes-padding-m) var(--mercedes-padding-xs);
+    gap: var(--mercedes-gap-m);
+  }
+
+  .footer-menu.flex-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+  }
+
+  .footer-menu > h4 {
+    font-size: 2.3em;
+    font-weight: 300;
+  }
+
+  .footer-menu > ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-menu > ul > li {
+    font-size: 1.6em;
+    font-weight: 200;
+  }
+
+  .footer-menu > ul > li > a {
+    cursor: pointer;
+    color: var(--mercedes-text-color-050);
+  }
+
+  .footer-menu > ul > li > a:hover {
+    text-decoration: underline;
+  }
+
+  .top-button {
+    width: 35px;
+    margin: var(--mercedes-margin-xs);
+  }
+
+  .top-button > a > img {
+    cursor: pointer;
+    width: 35px;
+  }
+}
